@@ -1,0 +1,156 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+
+\title{ECN 591: Market Design Problem Set #2}
+\author{Alyssa Alvarez}
+\date{February 23, 2026}
+
+\begin{document}
+
+\maketitle
+
+% ===============================
+\section*{Part 1: Market Setup}
+
+\subsection*{Student Preferences}
+
+\begin{table}[H]
+\centering
+\caption{Student Preference Profile}
+\begin{tabular}{llll}
+\toprule
+Student & 1st Choice & 2nd Choice & 3rd Choice \\
+\midrule
+i1 & s3 & s3 & s3 \\
+i10 & s3 & s3 & s3 \\
+i11 & s3 & s3 & s3 \\
+i12 & s2 & s2 & s2 \\
+i13 & s2 & s2 & s2 \\
+i14 & s3 & s3 & s3 \\
+i15 & s1 & s1 & s1 \\
+i16 & s3 & s3 & s3 \\
+i17 & s1 & s1 & s1 \\
+i18 & s1 & s1 & s1 \\
+i2 & s3 & s3 & s3 \\
+i3 & s2 & s2 & s2 \\
+i4 & s3 & s3 & s3 \\
+i5 & s1 & s1 & s1 \\
+i6 & s3 & s3 & s3 \\
+i7 & s3 & s3 & s3 \\
+i8 & s1 & s1 & s1 \\
+i9 & s1 & s1 & s1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{School Priorities}
+
+\begin{table}[H]
+\centering
+\caption{School Priority Orderings}
+\begin{tabular}{llllll}
+\toprule
+School & Priority 1 & Priority 2 & Priority 3 & Priority 4 & Priority 5 \\
+\midrule
+s1 & i5 & i10 & i8 & i11 & i12 \\
+s2 & i15 & i10 & i18 & i1 & i3 \\
+s3 & i2 & i7 & i16 & i3 & i5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ===============================
+\section*{Part 2: Matching Mechanisms}
+
+\subsection*{Final Matching Outcomes}
+
+\begin{table}[H]
+\centering
+\caption{Final Assignment Under Each Mechanism}
+\begin{tabular}{llll}
+\toprule
+Student & DA & IA & TTC \\
+\midrule
+i1 & s1 & s2 & s3 \\
+i10 & s3 & s3 & s3 \\
+i11 & s3 & s1 & s3 \\
+i12 & s1 & s2 & s2 \\
+i13 & s3 & s2 & s2 \\
+i14 & s1 & s3 & s3 \\
+i15 & s2 & s1 & s1 \\
+i16 & s3 & s3 & s3 \\
+i17 & s2 & s1 & s1 \\
+i18 & s2 & s1 & s1 \\
+i2 & s1 & s3 & s3 \\
+i3 & s2 & s2 & s2 \\
+i4 & s1 & s2 & s3 \\
+i5 & s3 & s1 & s1 \\
+i6 & s2 & s3 & s3 \\
+i7 & s2 & s3 & s3 \\
+i8 & s3 & s1 & s1 \\
+i9 & s1 & s1 & s1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ===============================
+\section*{Part 3: Efficiency Analysis}
+
+\subsection*{Rank of Assigned School}
+
+\begin{table}[H]
+\centering
+\caption{Rank of Assigned School by Mechanism}
+\begin{tabular}{lrrr}
+\toprule
+Student & DA Rank & IA Rank & TTC Rank \\
+\midrule
+i1 & 2 & 2 & 1 \\
+i10 & 1 & 4 & 1 \\
+i11 & 2 & 2 & 1 \\
+i12 & 1 & 1 & 1 \\
+i13 & 1 & 1 & 1 \\
+i14 & 1 & 1 & 1 \\
+i15 & 1 & 1 & 1 \\
+i16 & 1 & 1 & 1 \\
+i17 & 1 & 1 & 1 \\
+i18 & 1 & 1 & 1 \\
+i2 & 1 & 1 & 1 \\
+i3 & 1 & 1 & 1 \\
+i4 & 3 & 3 & 1 \\
+i5 & 1 & 1 & 1 \\
+i6 & 1 & 1 & 1 \\
+i7 & 1 & 1 & 1 \\
+i8 & 1 & 1 & 1 \\
+i9 & 2 & 3 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Average Rank Across 1000 Simulations}
+
+\begin{table}[H]
+\centering
+\caption{Average Student Rank}
+\begin{tabular}{lr}
+\toprule
+Mechanism & Average Rank \\
+\midrule
+Deferred Acceptance (DA) & 1.2127 \\
+Immediate Acceptance (IA) & 1.2694 \\
+Top Trading Cycles (TTC) & 4.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{Interpretation}
+
+Looking at Table 5, Deferred Acceptance (DA) has the lowest ranked average of 1.213 out of the three matching mechanisms with Immediate Acceptance (IA) ranked as the second lowest with 1.270 and Top Trading Cycles (TTC) ranked as the highest average with 4.000. An average DA of 1.213 shows that students do not receive optimal assignments under this mechanism compared to IA which is slightly better and TTC which has a more optimal outcome. 
+
+\end{document}
